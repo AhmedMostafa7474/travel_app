@@ -1,8 +1,10 @@
 
 import 'dart:core';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'Activi.dart';
+import 'Hotel.dart';
 
 class Destination
 {
@@ -11,6 +13,7 @@ class Destination
   String city;
   String describtion;
   List<Activity> activ;
+  List<Hotel1> hotels1;
   Destination(
   {
   this.image,
@@ -18,6 +21,7 @@ class Destination
     this.country,
     this.describtion,
 this.activ,
+    this.hotels1,
   }
       );
 }
@@ -153,6 +157,7 @@ List<Activity> activGiza=[
 ];
 List<Destination> Destin=[
   Destination(
+    hotels1: hotelMadrid,
       activ: activMadrid,
       country: "Espn",
       city: "Madrid",
@@ -161,6 +166,7 @@ List<Destination> Destin=[
 
   ),
   Destination(
+    hotels1: hotelberlin,
     activ: activberlin,
     country: "German",
     city: "Berlin",
@@ -168,6 +174,7 @@ List<Destination> Destin=[
     image:"assets/berlin.jpg" ,
   ),
   Destination(
+    hotels1: hotelfrance,
     activ: activfrance,
     country: "France",
     city: "Paris",
@@ -176,6 +183,7 @@ List<Destination> Destin=[
 
   ),
   Destination(
+    hotels1: hotelGizq,
     activ: activGiza,
     country: "Egypt",
     city: "Giza",
@@ -183,10 +191,203 @@ List<Destination> Destin=[
     image: "assets/Giza.jpg" ,
   ),
   Destination(
+    hotels1: hoteltokyo,
     activ: activTokyo,
     country: "Japan",
     city: "Tokyo",
     describtion: "Visit Tokyo for amazing adventure",
     image: "assets/tokyo.jpg",
   ),
+];
+List<Hotel1> hotelfrance=[
+  Hotel1(
+      name: " Hôtel Juliana Paris",
+      price: 200,
+      address: "Effiel Tower street",
+      image:"assets/hotel1.jpg"
+      , feathers: fe
+  ),
+  Hotel1(
+      name: "Hotel Las Vegas",
+      price: 150,
+      address: "Effiel Tower street",
+      image:"assets/hotel2.jpg"
+      ,feathers: fe2
+  ),
+  Hotel1(
+      name: "Hotel la Nouvelle Republique",
+      price: 120,
+      address: "Effiel Tower street",
+      image:"assets/Hotel.jpg"
+      ,feathers: fe
+  ),
+ ];
+List<Hotel1> hotelberlin=[
+  Hotel1(
+      name: " Hotel de Rome",
+      price: 300,
+      address: "Berlin",
+      image:"assets/berlinh1.jpg",feathers: fe
+  ),
+  Hotel1(
+      name: "The Ritz-Carlton, Berlin",
+      price: 150,
+      address: "Berlin",
+      image:"assets/berlinh2.jpg",feathers: fe2
+  ),
+  Hotel1(
+      name: "Berlin Das Stue",
+      price: 150,
+      address: "Berlin",
+      image:"assets/berlinh3.jpg"
+      ,feathers: fe3
+  ),
+];
+List<Hotel1> hotelMadrid=[
+  Hotel1(
+      name: " Gran Hotel Ingles",
+      price: 200,
+      address: "Madrid",
+      image:"assets/madridh1.jpg"
+      ,feathers: fe
+  ),
+  Hotel1(
+      name: "Bless Hotel Madrid",
+      price: 150,
+      address: "Madrid",
+      image:"assets/madridh2.jpg"
+      ,feathers: fe2
+  ),
+  Hotel1(
+      name: "The Level at Melia Castilla",
+      price: 150,
+      address: "Madrid",
+      image:"assets/madridh3.jpg"
+      ,feathers: fe2
+  ),
+];
+List<Hotel1> hoteltokyo=[
+  Hotel1(
+      name: " HMandarin Oriental",
+      price: 200,
+      address: "tokyo",
+      image:"assets/tokyo1.jpg"
+      ,feathers: fe
+  ),
+  Hotel1(
+      name: "The Ritz-Carlton",
+      price: 150,
+      address: "tokyo",
+      image:"assets/tokyo2.jpg"
+      ,feathers: fe2
+  ),
+  Hotel1(
+      name: "HOSHINOYA",
+      price: 150,
+      address: "tokyo",
+      image:"assets/tokyo3.jpg"
+      ,feathers: fe3
+  ),
+];
+List<Hotel1> hotelGizq=[
+  Hotel1(
+      name: "Marriott Mena House",
+      price: 200,
+      address: "Gizq",
+      image:"assets/giza1.jpg"
+      ,feathers: fe
+  ),
+  Hotel1(
+      name: "Four Seasons Hotel",
+      price: 150,
+      address: "Gizq",
+      image:"assets/giza2.jpg"
+      ,feathers: fe3
+
+  ),
+  Hotel1(
+      name: "Sheraton Cairo Hotel",
+      price: 150,
+      address: "Gizq",
+      image:"assets/giza3.jpg"
+      ,feathers: fe2
+  ),
+];
+
+final List <Row> fe=
+[
+  Row(
+    children: [
+      Icon(FontAwesomeIcons.swimmingPool,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+
+      Text("Pool")
+    ],
+  ),
+  Row(
+    children: [
+      Icon(Icons.directions_car,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+      Text("Barking")
+    ],
+  ),
+  Row(
+    children: [
+      Icon(Icons.restaurant,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+      Text("Restaurant")
+    ],
+  )
+];
+
+final List <Row> fe2=
+[
+  Row(
+    children: [
+      Icon(Icons.room_service,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+
+      Text("Room service")
+    ],
+  ),
+  Row(
+    children: [
+      Icon(Icons.directions_car,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+
+      Text("Barking")
+    ],
+  ),
+  Row(
+    children: [
+      Icon(Icons.restaurant,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+
+      Text("Restaurant")
+    ],
+  )
+];
+
+final List <Row> fe3=
+[
+  Row(
+    children: [
+      Icon(Icons.local_offer,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+
+      Text("Special offer")
+    ],
+  ),
+  Row(
+    children: [
+      Icon(Icons.directions_car,size: 20.0,color: Colors.grey,),
+      SizedBox(width: 5.0,),
+      Text("Barking")
+    ],
+  ),
+  Row(
+children: [
+  SizedBox(width: 5.0,),
+],
+  )
 ];

@@ -1,32 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class Hotel1 {
   String image;
   String name;
   String address;
   int price;
+  List<Row>feathers;
 
   Hotel1({
     this.name,
     this.price,
     this.image,
     this.address,
+    this.feathers
   }
       );
 }
-final List <Hotel1> hotel=
-    [
-Hotel1(
-  name: " Hôtel Juliana Paris",
-  price: 100,
-  address: "Effiel Tower street",
-  image:"assets/hotel1.jpg"
-),
-      Hotel1(
-          name: "Las Vegas",
-          price: 100,
-          address: "Effiel Tower street",
-          image:"assets/hotel2.jpg"
-      ),
-    ];
 

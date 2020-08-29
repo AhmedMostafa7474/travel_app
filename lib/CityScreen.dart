@@ -64,7 +64,7 @@ class _cityScreenState extends State<cityScreen> {
                       mainAxisAlignment:MainAxisAlignment.spaceBetween ,
                             children:<Widget> [
                               IconButton(
-                                  icon: Icon(Icons.arrow_back,size: 30.0,),
+                                icon: Icon(Icons.arrow_back,size: 30.0,),
                                 color: Colors.black,
                                 onPressed: () => Navigator.pop(context),
                               ),
